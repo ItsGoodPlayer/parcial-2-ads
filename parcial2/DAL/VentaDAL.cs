@@ -1,26 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using BE;
 
 namespace DAL
 {
-    public class VentaDAL
+    public class VentaDAL : BaseDAO<VentaBE>
     {
-        private string connectionString;
-
-        public VentaDAL()
+        public VentaDAL() : base("Ventas")
         {
         }
 
-        public VentaDAL(string connectionString)
-        {
-        }
-
-        public bool GuardarVenta(VentaBE venta)
-        {
-        }
-
-        public VentaBE ObtenerPorId(int id)
+        public bool GuardarVentaCompleta(VentaBE venta)
         {
         }
 
@@ -36,19 +28,39 @@ namespace DAL
         {
         }
 
-        private int ObtenerProximoId()
+        public List<VentaBE> ObtenerVentasPorRangoFecha(DateTime fechaInicio, DateTime fechaFin)
         {
         }
 
-        protected void IniciarTransaccion()
+        protected override VentaBE MapearEntidad(DataRow row)
         {
         }
 
-        protected void ConfirmarTransaccion()
+        protected override List<SqlParameter> ObtenerParametrosInsertar(VentaBE entidad)
         {
         }
 
-        protected void RollbackTransaccion()
+        protected override List<SqlParameter> ObtenerParametrosActualizar(VentaBE entidad)
+        {
+        }
+
+        protected override string ObtenerQueryInsertar()
+        {
+        }
+
+        protected override string ObtenerQueryActualizar()
+        {
+        }
+
+        private bool GuardarDetalles(List<DetalleVentaBE> detalles, int ventaId)
+        {
+        }
+
+        private List<DetalleVentaBE> CargarDetallesVenta(int ventaId)
+        {
+        }
+
+        private DetalleVentaBE MapearDetalleVenta(DataRow row)
         {
         }
     }

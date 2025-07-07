@@ -1,18 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using BE;
 
 namespace DAL
 {
-    public class StockDAL
+    public class StockDAL : BaseDAO<object>
     {
-        private string connectionString;
-
-        public StockDAL()
-        {
-        }
-
-        public StockDAL(string connectionString)
+        public StockDAL() : base("Stock")
         {
         }
 
@@ -40,6 +36,22 @@ namespace DAL
         {
         }
 
+        public List<int> ObtenerMedicamentosConStockBajo(int stockMinimo)
+        {
+        }
+
+        protected override object MapearEntidad(DataRow row)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosInsertar(object entidad)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosActualizar(object entidad)
+        {
+        }
+
         private bool ValidarStockMinimo(int medicamentoId)
         {
         }
@@ -49,6 +61,14 @@ namespace DAL
         }
 
         protected void RegistrarMovimientoStock(int medicamentoId, int cantidad, string tipo)
+        {
+        }
+
+        private string ObtenerQueryStockPorMedicamento()
+        {
+        }
+
+        private string ObtenerQueryActualizarStock()
         {
         }
     }

@@ -1,30 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using BE;
 
 namespace DAL
 {
-    public class MedicamentoDAL
+    public class MedicamentoDAL : BaseDAO<MedicamentoBE>
     {
-        private string connectionString;
-
-        public MedicamentoDAL()
-        {
-        }
-
-        public MedicamentoDAL(string connectionString)
-        {
-        }
-
-        public List<MedicamentoBE> ObtenerTodos()
-        {
-        }
-
-        public MedicamentoBE ObtenerPorId(int id)
-        {
-        }
-
-        public bool ExisteMedicamento(int id)
+        public MedicamentoDAL() : base("Medicamentos")
         {
         }
 
@@ -40,11 +24,39 @@ namespace DAL
         {
         }
 
-        private string ObtenerQueryBase()
+        public List<MedicamentoBE> ObtenerMedicamentosConReceta()
         {
         }
 
-        protected void ValidarConexion()
+        public List<MedicamentoBE> ObtenerMedicamentosSinReceta()
+        {
+        }
+
+        protected override MedicamentoBE MapearEntidad(DataRow row)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosInsertar(MedicamentoBE entidad)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosActualizar(MedicamentoBE entidad)
+        {
+        }
+
+        protected override string ObtenerQueryInsertar()
+        {
+        }
+
+        protected override string ObtenerQueryActualizar()
+        {
+        }
+
+        private MedicamentoBE CrearMedicamentoSegunTipo(DataRow row)
+        {
+        }
+
+        private List<SqlParameter> ObtenerParametrosComunes(MedicamentoBE medicamento)
         {
         }
     }

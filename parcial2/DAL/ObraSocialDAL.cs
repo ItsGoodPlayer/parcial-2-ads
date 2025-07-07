@@ -1,26 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using BE;
 
 namespace DAL
 {
-    public class ObraSocialDAL
+    public class ObraSocialDAL : BaseDAO<ObraSocialBE>
     {
-        private string connectionString;
-
-        public ObraSocialDAL()
-        {
-        }
-
-        public ObraSocialDAL(string connectionString)
-        {
-        }
-
-        public List<ObraSocialBE> ObtenerTodas()
-        {
-        }
-
-        public ObraSocialBE ObtenerPorId(int id)
+        public ObraSocialDAL() : base("ObrasSociales")
         {
         }
 
@@ -40,11 +28,39 @@ namespace DAL
         {
         }
 
+        public List<ObraSocialBE> BuscarPorNombre(string nombre)
+        {
+        }
+
+        protected override ObraSocialBE MapearEntidad(DataRow row)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosInsertar(ObraSocialBE entidad)
+        {
+        }
+
+        protected override List<SqlParameter> ObtenerParametrosActualizar(ObraSocialBE entidad)
+        {
+        }
+
+        protected override string ObtenerQueryInsertar()
+        {
+        }
+
+        protected override string ObtenerQueryActualizar()
+        {
+        }
+
         private bool ValidarCodigoObraSocial(string codigo)
         {
         }
 
         protected void CacheearObrasSociales()
+        {
+        }
+
+        private string ObtenerQueryPorCodigo()
         {
         }
     }
