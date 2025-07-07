@@ -4,12 +4,12 @@ namespace BE
 {
     public class CategoriaBE
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public bool RequiereRecetaMedica { get; set; }
-        public int EdadMinimaVenta { get; set; }
-        public bool EsActiva { get; set; }
+        private int id;
+        private string nombre;
+        private string descripcion;
+        private bool requiereRecetaMedica;
+        private int edadMinimaVenta;
+        private bool esActiva;
 
         public CategoriaBE()
         {
@@ -17,10 +17,70 @@ namespace BE
 
         public CategoriaBE(string nombre, bool requiereRecetaMedica)
         {
-            Nombre = nombre;
-            RequiereRecetaMedica = requiereRecetaMedica;
-            EsActiva = true;
-            EdadMinimaVenta = 0;
+            this.nombre = nombre;
+            this.requiereRecetaMedica = requiereRecetaMedica;
+            this.esActiva = true;
+            this.edadMinimaVenta = 0;
+        }
+
+        public int GetId()
+        {
+            return id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        public string GetNombre()
+        {
+            return nombre;
+        }
+
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public string GetDescripcion()
+        {
+            return descripcion;
+        }
+
+        public void SetDescripcion(string descripcion)
+        {
+            this.descripcion = descripcion;
+        }
+
+        public bool GetRequiereRecetaMedica()
+        {
+            return requiereRecetaMedica;
+        }
+
+        public void SetRequiereRecetaMedica(bool requiereRecetaMedica)
+        {
+            this.requiereRecetaMedica = requiereRecetaMedica;
+        }
+
+        public int GetEdadMinimaVenta()
+        {
+            return edadMinimaVenta;
+        }
+
+        public void SetEdadMinimaVenta(int edadMinimaVenta)
+        {
+            this.edadMinimaVenta = edadMinimaVenta;
+        }
+
+        public bool GetEsActiva()
+        {
+            return esActiva;
+        }
+
+        public void SetEsActiva(bool esActiva)
+        {
+            this.esActiva = esActiva;
         }
     }
 }

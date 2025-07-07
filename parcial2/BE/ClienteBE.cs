@@ -4,10 +4,10 @@ namespace BE
 {
     public class ClienteBE : UsuarioBE
     {
-        public DateTime FechaNacimiento { get; set; }
-        public ObraSocialBE ObraSocial { get; set; }
-        public string NumeroAfiliado { get; set; }
-        public bool TieneDescuentoTerceraEdad { get; set; }
+        private DateTime fechaNacimiento;
+        private ObraSocialBE obraSocial;
+        private string numeroAfiliado;
+        private bool tieneDescuentoTerceraEdad;
 
         public ClienteBE()
         {
@@ -16,8 +16,8 @@ namespace BE
         public ClienteBE(string dni, string nombre, string apellido, DateTime fechaNacimiento) 
             : base(dni, nombre, apellido)
         {
-            FechaNacimiento = fechaNacimiento;
-            TieneDescuentoTerceraEdad = CalcularEsTerceraEdad();
+            this.fechaNacimiento = fechaNacimiento;
+            this.tieneDescuentoTerceraEdad = CalcularEsTerceraEdad();
         }
 
         public override string ObtenerTipoUsuario()
@@ -28,14 +28,54 @@ namespace BE
         public int CalcularEdad()
         {
             var today = DateTime.Today;
-            var age = today.Year - FechaNacimiento.Year;
-            if (FechaNacimiento.Date > today.AddYears(-age)) age--;
+            var age = today.Year - fechaNacimiento.Year;
+            if (fechaNacimiento.Date > today.AddYears(-age)) age--;
             return age;
         }
 
         private bool CalcularEsTerceraEdad()
         {
             return CalcularEdad() >= 65;
+        }
+
+        public DateTime GetFechaNacimiento()
+        {
+            return fechaNacimiento;
+        }
+
+        public void SetFechaNacimiento(DateTime fechaNacimiento)
+        {
+            this.fechaNacimiento = fechaNacimiento;
+        }
+
+        public ObraSocialBE GetObraSocial()
+        {
+            return obraSocial;
+        }
+
+        public void SetObraSocial(ObraSocialBE obraSocial)
+        {
+            this.obraSocial = obraSocial;
+        }
+
+        public string GetNumeroAfiliado()
+        {
+            return numeroAfiliado;
+        }
+
+        public void SetNumeroAfiliado(string numeroAfiliado)
+        {
+            this.numeroAfiliado = numeroAfiliado;
+        }
+
+        public bool GetTieneDescuentoTerceraEdad()
+        {
+            return tieneDescuentoTerceraEdad;
+        }
+
+        public void SetTieneDescuentoTerceraEdad(bool tieneDescuentoTerceraEdad)
+        {
+            this.tieneDescuentoTerceraEdad = tieneDescuentoTerceraEdad;
         }
     }
 }

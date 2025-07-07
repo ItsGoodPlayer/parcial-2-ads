@@ -4,12 +4,12 @@ namespace BE
 {
     public class MetodoPagoBE
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Tipo { get; set; }
-        public bool EsActivo { get; set; }
-        public decimal ComisionPorcentaje { get; set; }
-        public bool RequiereAutorizacion { get; set; }
+        private int id;
+        private string nombre;
+        private string tipo;
+        private bool esActivo;
+        private decimal comisionPorcentaje;
+        private bool requiereAutorizacion;
 
         public MetodoPagoBE()
         {
@@ -17,9 +17,69 @@ namespace BE
 
         public MetodoPagoBE(string nombre, string tipo)
         {
-            Nombre = nombre;
-            Tipo = tipo;
-            EsActivo = true;
+            this.nombre = nombre;
+            this.tipo = tipo;
+            this.esActivo = true;
+        }
+
+        public int GetId()
+        {
+            return id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        public string GetNombre()
+        {
+            return nombre;
+        }
+
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public string GetTipo()
+        {
+            return tipo;
+        }
+
+        public void SetTipo(string tipo)
+        {
+            this.tipo = tipo;
+        }
+
+        public bool GetEsActivo()
+        {
+            return esActivo;
+        }
+
+        public void SetEsActivo(bool esActivo)
+        {
+            this.esActivo = esActivo;
+        }
+
+        public decimal GetComisionPorcentaje()
+        {
+            return comisionPorcentaje;
+        }
+
+        public void SetComisionPorcentaje(decimal comisionPorcentaje)
+        {
+            this.comisionPorcentaje = comisionPorcentaje;
+        }
+
+        public bool GetRequiereAutorizacion()
+        {
+            return requiereAutorizacion;
+        }
+
+        public void SetRequiereAutorizacion(bool requiereAutorizacion)
+        {
+            this.requiereAutorizacion = requiereAutorizacion;
         }
     }
 }

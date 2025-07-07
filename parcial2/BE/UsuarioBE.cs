@@ -4,15 +4,15 @@ namespace BE
 {
     public abstract class UsuarioBE
     {
-        public int Id { get; set; }
-        public string DNI { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Email { get; set; }
-        public string Telefono { get; set; }
-        public string Direccion { get; set; }
-        public DateTime FechaRegistro { get; set; }
-        public bool EsActivo { get; set; }
+        private int id;
+        private string dni;
+        private string nombre;
+        private string apellido;
+        private string email;
+        private string telefono;
+        private string direccion;
+        private DateTime fechaRegistro;
+        private bool esActivo;
 
         protected UsuarioBE()
         {
@@ -20,18 +20,108 @@ namespace BE
 
         protected UsuarioBE(string dni, string nombre, string apellido)
         {
-            DNI = dni;
-            Nombre = nombre;
-            Apellido = apellido;
-            FechaRegistro = DateTime.Now;
-            EsActivo = true;
+            this.dni = dni;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.fechaRegistro = DateTime.Now;
+            this.esActivo = true;
         }
 
         public abstract string ObtenerTipoUsuario();
 
         public virtual string NombreCompleto()
         {
-            return $"{Nombre} {Apellido}";
+            return $"{nombre} {apellido}";
+        }
+
+        public int GetId()
+        {
+            return id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        public string GetDNI()
+        {
+            return dni;
+        }
+
+        public void SetDNI(string dni)
+        {
+            this.dni = dni;
+        }
+
+        public string GetNombre()
+        {
+            return nombre;
+        }
+
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public string GetApellido()
+        {
+            return apellido;
+        }
+
+        public void SetApellido(string apellido)
+        {
+            this.apellido = apellido;
+        }
+
+        public string GetEmail()
+        {
+            return email;
+        }
+
+        public void SetEmail(string email)
+        {
+            this.email = email;
+        }
+
+        public string GetTelefono()
+        {
+            return telefono;
+        }
+
+        public void SetTelefono(string telefono)
+        {
+            this.telefono = telefono;
+        }
+
+        public string GetDireccion()
+        {
+            return direccion;
+        }
+
+        public void SetDireccion(string direccion)
+        {
+            this.direccion = direccion;
+        }
+
+        public DateTime GetFechaRegistro()
+        {
+            return fechaRegistro;
+        }
+
+        public void SetFechaRegistro(DateTime fechaRegistro)
+        {
+            this.fechaRegistro = fechaRegistro;
+        }
+
+        public bool GetEsActivo()
+        {
+            return esActivo;
+        }
+
+        public void SetEsActivo(bool esActivo)
+        {
+            this.esActivo = esActivo;
         }
     }
 }

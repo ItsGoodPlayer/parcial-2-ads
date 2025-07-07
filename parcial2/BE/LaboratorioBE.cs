@@ -4,13 +4,13 @@ namespace BE
 {
     public class LaboratorioBE
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
-        public string Email { get; set; }
-        public string Pais { get; set; }
-        public bool EsActivo { get; set; }
+        private int id;
+        private string nombre;
+        private string direccion;
+        private string telefono;
+        private string email;
+        private string pais;
+        private bool esActivo;
 
         public LaboratorioBE()
         {
@@ -18,9 +18,79 @@ namespace BE
 
         public LaboratorioBE(string nombre, string pais)
         {
-            Nombre = nombre;
-            Pais = pais;
-            EsActivo = true;
+            this.nombre = nombre;
+            this.pais = pais;
+            this.esActivo = true;
+        }
+
+        public int GetId()
+        {
+            return id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        public string GetNombre()
+        {
+            return nombre;
+        }
+
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public string GetDireccion()
+        {
+            return direccion;
+        }
+
+        public void SetDireccion(string direccion)
+        {
+            this.direccion = direccion;
+        }
+
+        public string GetTelefono()
+        {
+            return telefono;
+        }
+
+        public void SetTelefono(string telefono)
+        {
+            this.telefono = telefono;
+        }
+
+        public string GetEmail()
+        {
+            return email;
+        }
+
+        public void SetEmail(string email)
+        {
+            this.email = email;
+        }
+
+        public string GetPais()
+        {
+            return pais;
+        }
+
+        public void SetPais(string pais)
+        {
+            this.pais = pais;
+        }
+
+        public bool GetEsActivo()
+        {
+            return esActivo;
+        }
+
+        public void SetEsActivo(bool esActivo)
+        {
+            this.esActivo = esActivo;
         }
     }
 }
