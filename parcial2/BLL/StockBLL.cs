@@ -5,21 +5,21 @@ using DAL;
 
 namespace BLL
 {
-    public class StockBLL : ValidadorBaseBLL
+    public class StockBLL
     {
         private StockDAL stockDAL;
         private MedicamentoDAL medicamentoDAL;
 
         public StockBLL()
         {
+            stockDAL = new StockDAL();
+            medicamentoDAL = new MedicamentoDAL();
         }
 
         public StockBLL(StockDAL stockDAL, MedicamentoDAL medicamentoDAL)
         {
-        }
-
-        public override bool Validar(object objeto)
-        {
+            this.stockDAL = stockDAL;
+            this.medicamentoDAL = medicamentoDAL;
         }
 
         public bool VerificarStock(int medicamentoId, int cantidadRequerida)
@@ -46,7 +46,11 @@ namespace BLL
         {
         }
 
-        protected override bool ValidarDatosObligatorios(object objeto)
+        public bool ValidarStockSuficiente(DetalleVentaBE detalle)
+        {
+        }
+
+        public List<int> ObtenerMedicamentosConStockBajo(int stockMinimo)
         {
         }
 

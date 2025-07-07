@@ -12,33 +12,20 @@ namespace BE
         public decimal MontoFinal { get; set; }
         public string Estado { get; set; }
         public List<DetalleVentaBE> Detalles { get; set; }
+        public List<PagoBE> Pagos { get; set; }
+        public string FormaPago { get; set; }
 
         public VentaBE()
         {
+            Detalles = new List<DetalleVentaBE>();
+            Pagos = new List<PagoBE>();
         }
 
         public VentaBE(DateTime fecha)
         {
-        }
-
-        public void AgregarDetalle(DetalleVentaBE detalle)
-        {
-        }
-
-        public decimal CalcularMontoTotal()
-        {
-        }
-
-        public void AplicarDescuento(decimal montoDescuento)
-        {
-        }
-
-        private bool ValidarEstado()
-        {
-        }
-
-        public List<MedicamentoBE> ObtenerMedicamentosConReceta()
-        {
+            Fecha = fecha;
+            Detalles = new List<DetalleVentaBE>();
+            Pagos = new List<PagoBE>();
         }
     }
 }

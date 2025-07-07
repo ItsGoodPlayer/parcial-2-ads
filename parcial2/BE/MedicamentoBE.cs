@@ -9,7 +9,8 @@ namespace BE
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public int Stock { get; set; }
-        public string Laboratorio { get; set; }
+        public LaboratorioBE Laboratorio { get; set; }
+        public CategoriaBE Categoria { get; set; }
 
         protected MedicamentoBE()
         {
@@ -17,16 +18,12 @@ namespace BE
 
         protected MedicamentoBE(int id, string nombre, decimal precio, int stock)
         {
+            Id = id;
+            Nombre = nombre;
+            Precio = precio;
+            Stock = stock;
         }
 
         public abstract bool RequiereReceta();
-        
-        protected virtual bool ValidarStock(int cantidadSolicitada)
-        {
-        }
-
-        public virtual decimal CalcularPrecioTotal(int cantidad)
-        {
-        }
     }
 }

@@ -5,20 +5,24 @@ using DAL;
 
 namespace BLL
 {
-    public class MedicamentoBLL : ValidadorBaseBLL
+    public class MedicamentoBLL
     {
         private MedicamentoDAL medicamentoDAL;
         private StockDAL stockDAL;
 
         public MedicamentoBLL()
         {
+            medicamentoDAL = new MedicamentoDAL();
+            stockDAL = new StockDAL();
         }
 
         public MedicamentoBLL(MedicamentoDAL medicamentoDAL, StockDAL stockDAL)
         {
+            this.medicamentoDAL = medicamentoDAL;
+            this.stockDAL = stockDAL;
         }
 
-        public override bool Validar(object objeto)
+        public bool ValidarMedicamento(MedicamentoBE medicamento)
         {
         }
 
@@ -42,7 +46,15 @@ namespace BLL
         {
         }
 
-        protected override bool ValidarDatosObligatorios(object objeto)
+        public List<MedicamentoBE> BuscarPorNombre(string nombre)
+        {
+        }
+
+        public decimal CalcularPrecioTotal(MedicamentoBE medicamento, int cantidad)
+        {
+        }
+
+        private bool ValidarDatosObligatorios(MedicamentoBE medicamento)
         {
         }
 

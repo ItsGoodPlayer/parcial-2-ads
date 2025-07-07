@@ -5,20 +5,18 @@ using DAL;
 
 namespace BLL
 {
-    public class RecetaBLL : ValidadorBaseBLL
+    public class RecetaBLL
     {
         private ObraSocialDAL obraSocialDAL;
 
         public RecetaBLL()
         {
+            obraSocialDAL = new ObraSocialDAL();
         }
 
         public RecetaBLL(ObraSocialDAL obraSocialDAL)
         {
-        }
-
-        public override bool Validar(object objeto)
-        {
+            this.obraSocialDAL = obraSocialDAL;
         }
 
         public bool ValidarReceta(RecetaBE receta)
@@ -37,7 +35,15 @@ namespace BLL
         {
         }
 
-        protected override bool ValidarDatosObligatorios(object objeto)
+        public bool ValidarRecetaVigente(DateTime fechaReceta)
+        {
+        }
+
+        public void AsignarObraSocial(RecetaBE receta, ObraSocialBE obraSocial)
+        {
+        }
+
+        private bool ValidarDatosObligatorios(RecetaBE receta)
         {
         }
 

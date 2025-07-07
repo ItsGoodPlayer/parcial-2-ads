@@ -18,26 +18,9 @@ namespace BE
 
         public RecetaBE(DateTime fecha, string numeroReceta, string medico)
         {
-        }
-
-        public bool ValidarVigencia()
-        {
-        }
-
-        public void AsignarObraSocial(ObraSocialBE obraSocial)
-        {
-        }
-
-        private bool VerificarFechaVencimiento()
-        {
-        }
-
-        protected bool ValidarDatosMinimos()
-        {
-        }
-
-        public decimal ObtenerPorcentajeDescuento()
-        {
+            Fecha = fecha;
+            NumeroReceta = numeroReceta;
+            Medico = medico;
         }
     }
 }

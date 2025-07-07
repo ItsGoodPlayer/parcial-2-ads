@@ -5,27 +5,21 @@ using DAL;
 
 namespace BLL
 {
-    public class DescuentoBLL : IDescuentoBE
+    public class DescuentoBLL
     {
         private ObraSocialDAL obraSocialDAL;
 
         public DescuentoBLL()
         {
+            obraSocialDAL = new ObraSocialDAL();
         }
 
         public DescuentoBLL(ObraSocialDAL obraSocialDAL)
         {
+            this.obraSocialDAL = obraSocialDAL;
         }
 
-        public decimal CalcularDescuento(decimal montoBase)
-        {
-        }
-
-        public bool EsAplicable(VentaBE venta)
-        {
-        }
-
-        public string ObtenerDescripcion()
+        public decimal CalcularDescuentoObraSocial(VentaBE venta, ObraSocialBE obraSocial)
         {
         }
 
@@ -37,7 +31,15 @@ namespace BLL
         {
         }
 
-        public List<IDescuentoBE> ObtenerDescuentosAplicables(VentaBE venta)
+        public bool EsAplicableDescuento(VentaBE venta, ObraSocialBE obraSocial)
+        {
+        }
+
+        public decimal BuscarDescuentoPorObraSocial(int obraSocialId)
+        {
+        }
+
+        public decimal AplicarDescuentoPorDetalle(DetalleVentaBE detalle, decimal porcentajeDescuento)
         {
         }
 

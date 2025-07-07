@@ -5,23 +5,33 @@ using DAL;
 
 namespace BLL
 {
-    public class VentaBLL : ValidadorBaseBLL
+    public class VentaBLL
     {
         private VentaDAL ventaDAL;
         private MedicamentoBLL medicamentoBLL;
         private StockBLL stockBLL;
         private DescuentoBLL descuentoBLL;
+        private RecetaBLL recetaBLL;
+        private PagoBLL pagoBLL;
 
         public VentaBLL()
         {
+            ventaDAL = new VentaDAL();
+            medicamentoBLL = new MedicamentoBLL();
+            stockBLL = new StockBLL();
+            descuentoBLL = new DescuentoBLL();
+            recetaBLL = new RecetaBLL();
+            pagoBLL = new PagoBLL();
         }
 
-        public VentaBLL(VentaDAL ventaDAL, MedicamentoBLL medicamentoBLL, StockBLL stockBLL, DescuentoBLL descuentoBLL)
+        public VentaBLL(VentaDAL ventaDAL, MedicamentoBLL medicamentoBLL, StockBLL stockBLL, DescuentoBLL descuentoBLL, RecetaBLL recetaBLL, PagoBLL pagoBLL)
         {
-        }
-
-        public override bool Validar(object objeto)
-        {
+            this.ventaDAL = ventaDAL;
+            this.medicamentoBLL = medicamentoBLL;
+            this.stockBLL = stockBLL;
+            this.descuentoBLL = descuentoBLL;
+            this.recetaBLL = recetaBLL;
+            this.pagoBLL = pagoBLL;
         }
 
         public bool ProcesarVenta(VentaBE venta)
@@ -44,7 +54,31 @@ namespace BLL
         {
         }
 
-        protected override bool ValidarDatosObligatorios(object objeto)
+        public void AgregarDetalle(VentaBE venta, DetalleVentaBE detalle)
+        {
+        }
+
+        public decimal CalcularSubtotal(DetalleVentaBE detalle)
+        {
+        }
+
+        public bool ValidarVenta(VentaBE venta)
+        {
+        }
+
+        public bool ProcesarPago(VentaBE venta, List<PagoBE> pagos)
+        {
+        }
+
+        public bool ValidarPagos(VentaBE venta, List<PagoBE> pagos)
+        {
+        }
+
+        public void AgregarPago(VentaBE venta, PagoBE pago)
+        {
+        }
+
+        public List<MetodoPagoBE> ObtenerMetodosPagoDisponibles()
         {
         }
 
@@ -53,6 +87,14 @@ namespace BLL
         }
 
         private bool ValidarMedicamentosExistentes(List<DetalleVentaBE> detalles)
+        {
+        }
+
+        private bool ValidarRecetasNecesarias(List<DetalleVentaBE> detalles)
+        {
+        }
+
+        private bool ValidarMontosSuficientes(VentaBE venta, List<PagoBE> pagos)
         {
         }
 

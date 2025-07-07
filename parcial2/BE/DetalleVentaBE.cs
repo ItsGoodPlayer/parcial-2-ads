@@ -18,22 +18,9 @@ namespace BE
 
         public DetalleVentaBE(MedicamentoBE medicamento, int cantidad)
         {
-        }
-
-        public decimal CalcularSubtotal()
-        {
-        }
-
-        public void AsignarReceta(RecetaBE receta)
-        {
-        }
-
-        private bool ValidarCantidad()
-        {
-        }
-
-        public bool TieneRecetaValida()
-        {
+            Medicamento = medicamento;
+            Cantidad = cantidad;
+            PrecioUnitario = medicamento.Precio;
         }
     }
 }

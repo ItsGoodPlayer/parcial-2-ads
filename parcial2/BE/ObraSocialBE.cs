@@ -17,22 +17,10 @@ namespace BE
 
         public ObraSocialBE(string nombre, string codigo, decimal porcentajeDescuento)
         {
-        }
-
-        public decimal CalcularDescuento(decimal montoBase)
-        {
-        }
-
-        public bool ValidarCobertura(MedicamentoBE medicamento)
-        {
-        }
-
-        private bool VerificarEstadoActivo()
-        {
-        }
-
-        protected decimal AplicarLimitesDescuento(decimal descuento)
-        {
+            Nombre = nombre;
+            Codigo = codigo;
+            PorcentajeDescuento = porcentajeDescuento;
+            EsActiva = true;
         }
     }
 }
