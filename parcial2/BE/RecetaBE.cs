@@ -8,7 +8,7 @@ namespace BE
         public DateTime Fecha { get; set; }
         public string NumeroReceta { get; set; }
         public string Medico { get; set; }
-        public string Paciente { get; set; }
+        public ClienteBE Paciente { get; set; }
         public ObraSocialBE ObraSocial { get; set; }
         public bool EsVigente { get; set; }
 
@@ -16,11 +16,12 @@ namespace BE
         {
         }
 
-        public RecetaBE(DateTime fecha, string numeroReceta, string medico)
+        public RecetaBE(DateTime fecha, string numeroReceta, string medico, ClienteBE paciente)
         {
             Fecha = fecha;
             NumeroReceta = numeroReceta;
             Medico = medico;
+            Paciente = paciente;
         }
     }
 }

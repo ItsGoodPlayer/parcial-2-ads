@@ -10,6 +10,7 @@ namespace DAL
         bool Eliminar(int id);
         T ObtenerPorId(int id);
         List<T> ObtenerTodos();
+        List<T> Listar();
         bool Existe(int id);
     }
 }

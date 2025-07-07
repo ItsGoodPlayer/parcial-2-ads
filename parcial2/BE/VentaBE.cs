@@ -14,6 +14,8 @@ namespace BE
         public List<DetalleVentaBE> Detalles { get; set; }
         public List<PagoBE> Pagos { get; set; }
         public string FormaPago { get; set; }
+        public VendedorBE Vendedor { get; set; }
+        public ClienteBE Cliente { get; set; }
 
         public VentaBE()
         {

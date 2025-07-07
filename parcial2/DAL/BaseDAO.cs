@@ -8,10 +8,10 @@ namespace DAL
     public abstract class BaseDAO<T> : IDAO<T>
     {
         protected AccesoDAL accesoDAL;
-        protected string tableName;
 
-        protected BaseDAO(string tableName)
+        protected BaseDAO()
         {
+            accesoDAL = new AccesoDAL();
         }
 
         public virtual bool Insertar(T entidad)
@@ -34,53 +34,9 @@ namespace DAL
         {
         }
 
+        public abstract List<T> Listar();
+
         public virtual bool Existe(int id)
-        {
-        }
-
-        protected abstract T MapearEntidad(DataRow row);
-
-        protected abstract List<SqlParameter> ObtenerParametrosInsertar(T entidad);
-
-        protected abstract List<SqlParameter> ObtenerParametrosActualizar(T entidad);
-
-        protected virtual string ObtenerQueryInsertar()
-        {
-        }
-
-        protected virtual string ObtenerQueryActualizar()
-        {
-        }
-
-        protected virtual string ObtenerQueryEliminar()
-        {
-        }
-
-        protected virtual string ObtenerQueryPorId()
-        {
-        }
-
-        protected virtual string ObtenerQueryTodos()
-        {
-        }
-
-        protected virtual string ObtenerQueryExiste()
-        {
-        }
-
-        private void InicializarAcceso()
-        {
-        }
-
-        protected void IniciarTransaccion()
-        {
-        }
-
-        protected void ConfirmarTransaccion()
-        {
-        }
-
-        protected void DeshacerTransaccion()
         {
         }
     }

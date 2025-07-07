@@ -30,43 +30,7 @@ namespace BLL
         {
         }
 
-        public void ReservarStock(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        public void ConfirmarVenta(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        public void LiberarStock(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        public int ObtenerStockDisponible(int medicamentoId)
-        {
-        }
-
-        public bool ValidarStockSuficiente(DetalleVentaBE detalle)
-        {
-        }
-
-        public List<int> ObtenerMedicamentosConStockBajo(int stockMinimo)
-        {
-        }
-
-        private bool ValidarCantidadSolicitada(int cantidad)
-        {
-        }
-
-        private bool ValidarMedicamentoExistente(int medicamentoId)
-        {
-        }
-
-        protected void ActualizarStockFisico(int medicamentoId, int cantidadVendida)
-        {
-        }
-
-        protected void RegistrarMovimiento(int medicamentoId, int cantidad, string tipoMovimiento)
+        public void ActualizarStock(List<DetalleVentaBE> detalles)
         {
         }
     }

@@ -42,67 +42,11 @@ namespace BLL
         {
         }
 
-        public bool ValidarStock(List<DetalleVentaBE> detalles)
-        {
-        }
-
         public decimal CalcularDescuentos(VentaBE venta)
         {
         }
 
-        public bool GuardarVenta(VentaBE venta)
-        {
-        }
-
-        public void AgregarDetalle(VentaBE venta, DetalleVentaBE detalle)
-        {
-        }
-
-        public decimal CalcularSubtotal(DetalleVentaBE detalle)
-        {
-        }
-
-        public bool ValidarVenta(VentaBE venta)
-        {
-        }
-
         public bool ProcesarPago(VentaBE venta, List<PagoBE> pagos)
-        {
-        }
-
-        public bool ValidarPagos(VentaBE venta, List<PagoBE> pagos)
-        {
-        }
-
-        public void AgregarPago(VentaBE venta, PagoBE pago)
-        {
-        }
-
-        public List<MetodoPagoBE> ObtenerMetodosPagoDisponibles()
-        {
-        }
-
-        private bool ValidarDetallesVenta(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        private bool ValidarMedicamentosExistentes(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        private bool ValidarRecetasNecesarias(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        private bool ValidarMontosSuficientes(VentaBE venta, List<PagoBE> pagos)
-        {
-        }
-
-        protected void ActualizarStock(List<DetalleVentaBE> detalles)
-        {
-        }
-
-        protected decimal CalcularMontoTotal(List<DetalleVentaBE> detalles)
         {
         }
     }

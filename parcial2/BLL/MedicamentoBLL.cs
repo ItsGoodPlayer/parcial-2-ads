@@ -22,19 +22,11 @@ namespace BLL
             this.stockDAL = stockDAL;
         }
 
-        public bool ValidarMedicamento(MedicamentoBE medicamento)
-        {
-        }
-
         public List<MedicamentoBE> ObtenerTodos()
         {
         }
 
-        public MedicamentoBE ObtenerPorId(int id)
-        {
-        }
-
-        public bool ExisteMedicamento(int id)
+        public bool ValidarMedicamento(MedicamentoBE medicamento)
         {
         }
 
@@ -43,30 +35,6 @@ namespace BLL
         }
 
         public List<MedicamentoBE> FiltrarMedicamentosConReceta(List<MedicamentoBE> medicamentos)
-        {
-        }
-
-        public List<MedicamentoBE> BuscarPorNombre(string nombre)
-        {
-        }
-
-        public decimal CalcularPrecioTotal(MedicamentoBE medicamento, int cantidad)
-        {
-        }
-
-        private bool ValidarDatosObligatorios(MedicamentoBE medicamento)
-        {
-        }
-
-        private bool ValidarPrecio(decimal precio)
-        {
-        }
-
-        private bool ValidarStock(int stock)
-        {
-        }
-
-        protected bool ValidarMedicamentoExistente(int id)
         {
         }
     }

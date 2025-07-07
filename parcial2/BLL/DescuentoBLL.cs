@@ -19,11 +19,7 @@ namespace BLL
             this.obraSocialDAL = obraSocialDAL;
         }
 
-        public decimal CalcularDescuentoObraSocial(VentaBE venta, ObraSocialBE obraSocial)
-        {
-        }
-
-        public decimal AplicarDescuentoObraSocial(VentaBE venta)
+        public decimal CalcularDescuentoObraSocial(VentaBE venta)
         {
         }
 
@@ -32,30 +28,6 @@ namespace BLL
         }
 
         public bool EsAplicableDescuento(VentaBE venta, ObraSocialBE obraSocial)
-        {
-        }
-
-        public decimal BuscarDescuentoPorObraSocial(int obraSocialId)
-        {
-        }
-
-        public decimal AplicarDescuentoPorDetalle(DetalleVentaBE detalle, decimal porcentajeDescuento)
-        {
-        }
-
-        private bool ValidarMontoMinimo(decimal monto)
-        {
-        }
-
-        private decimal AplicarLimitesDescuento(decimal descuento, decimal montoBase)
-        {
-        }
-
-        protected bool TieneRecetasConObraSocial(VentaBE venta)
-        {
-        }
-
-        protected decimal CalcularDescuentoPorDetalle(DetalleVentaBE detalle)
         {
         }
     }
